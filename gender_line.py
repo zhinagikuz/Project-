@@ -15,8 +15,8 @@ for lst in gender:
     female.append(int(lst[2]))
 
 # plot line graph
-ax.plot(years, male, color='#365e8c',label='Male', linewidth=2.5) # (x,y)
-ax.plot(years, female, color='#8c364a', label='Female', linewidth=2.5)
+plt.plot(years, male, color='#365e8c',label='Male', linewidth=2.5, marker='o') # (x,y)
+plt.plot(years, female, color='#8c364a', label='Female', linewidth=2.5, marker='o')
 
 plt.xlabel('Fiscal Years')
 plt.ylabel('Number of Patients')
