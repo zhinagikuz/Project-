@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
 # the data
 # open file type.txt
 file = open("type.txt","r")
@@ -26,21 +29,23 @@ fig, ax = plt.subplots()
 index = np.arange(n_groups)
 bar_width = 0.2
  
-rects1 = plt.bar(index, y2555, bar_width,
+rects1 = ax.bar(index, y2555, bar_width,
                  color='#b23737',
                  label='2555')
  
-rects2 = plt.bar(index + bar_width, y2556, bar_width,
+rects2 = ax.bar(index + bar_width, y2556, bar_width,
                  color='#81b237',
                  label='2556')
 
-rects3 = plt.bar(index + (bar_width*2), y2557, bar_width,
+rects3 = ax.bar(index + (bar_width*2), y2557, bar_width,
                  color='#3791b2',
                  label='2557')
  
-rects4 = plt.bar(index + (bar_width*3), y2558, bar_width,
+rects4 = ax.bar(index + (bar_width*3), y2558, bar_width,
                  color='#5237b2',
                  label='2558')
+
+ax.set_xlim(-bar_width,len(index)+bar_width)
 
 plt.xlabel('Drugs')
 plt.ylabel('Total')

@@ -29,7 +29,7 @@ rects2 = ax.bar(ind+width, female, width,
                     color='#8c364a')
 
 # axes and labels
-ax.set_xlim(-width,len(ind)+width) 
+
 ax.set_ylim(0,10000) # Y axes values limit
 ax.set_xlabel('Fiscal Years')
 ax.set_ylabel('Number of Patients')
