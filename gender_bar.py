@@ -18,30 +18,28 @@ for lst in gender:
     male.append(int(lst[1]))
     female.append(int(lst[2]))
 
-# necessary variables
-ind = np.arange(len(gender))
-width = 0.35
+n_groups = len(gender)
 
-rects1 = ax.bar(ind, male, width,
-                color='#365e8c', )
+# create plot
+index = np.arange(n_groups) # data in list
+bar_width = 0.35
 
-rects2 = ax.bar(ind+width, female, width,
-                    color='#8c364a')
+rects1 = ax.bar(index, male, bar_width,
+                color='#365e8c',
+                label = 'Male')
 
-# axes and labels
-ax.set_xlim(-width,len(ind)+width) 
-ax.set_ylim(0,10000) # Y axes values limit
-ax.set_xlabel('Fiscal Years')
-ax.set_ylabel('Number of Patients')
-ax.set_title('Gender')
-xTickMarks = [i for i in years]
-ax.set_xticks(ind+width)
-xtickNames = ax.set_xticklabels(xTickMarks)
-plt.setp(xtickNames, fontsize=10)
+rects2 = ax.bar(index + bar_width, female, bar_width,
+                color='#8c364a',
+                label = 'Female')
+
+plt.title('Gender')
+plt.xlabel('Fiscal Years')
+plt.ylabel('Number of Patients')
+plt.xticks(index + bar_width, ('2555', '2556', '2557', '2558'))
+plt.legend()
+
+ax.set_xlim(-bar_width, len(index) + bar_width)
 plt.grid(True)
-
-# add a legend
-ax.legend( (rects1[0], rects2[0]), ('Male', 'Female') )
 
 plt.show()
 
