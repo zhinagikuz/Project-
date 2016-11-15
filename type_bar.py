@@ -21,39 +21,37 @@ y2556 = [int(i) for i in drugs[1]]
 y2557 = [int(i) for i in drugs[2]]
 y2558 = [int(i) for i in drugs[3]]
 
-# data to plot
 n_groups = len(y2555)
  
 # create plot
-fig, ax = plt.subplots()
-index = np.arange(n_groups)
+index = np.arange(n_groups) # data in list
 bar_width = 0.2
  
 rects1 = ax.bar(index, y2555, bar_width,
-                 color='#b23737',
+                 color='#8888F0',
                  label='2555')
  
 rects2 = ax.bar(index + bar_width, y2556, bar_width,
-                 color='#81b237',
+                 color='#88F0BC',
                  label='2556')
 
 rects3 = ax.bar(index + (bar_width*2), y2557, bar_width,
-                 color='#3791b2',
+                 color='#F0BC88',
                  label='2557')
  
 rects4 = ax.bar(index + (bar_width*3), y2558, bar_width,
-                 color='#5237b2',
+                 color='#F088F0',
                  label='2558')
 
-ax.set_xlim(-bar_width,len(index)+bar_width)
-
+plt.title('Type of Drugs')
 plt.xlabel('Drugs')
 plt.ylabel('Total')
-plt.title('Type of Drugs')
-plt.xticks(index + bar_width*2, ('heloin', 'opium', 'weed', 'kratom', 'sedative', 'amphetamine', 'narcotic', 'alcohol', 'volatile','cigarette','ice', 'other','unknown'))
+plt.xticks(index + bar_width*2, ('Heloin', 'Opium', 'Weed', 'Kratom', 'Sedative', 'Amphetamine', 'Narcotic', 'Alcohol', 'Volatile','Cigarette','Ice', 'Other','Unknown'))
 plt.legend()
- 
-plt.tight_layout()
+
+ax.set_xlim(-bar_width,len(index)+bar_width) # space margin left
+plt.grid(True)
+
 plt.show()
 
 # close file gender.txt
