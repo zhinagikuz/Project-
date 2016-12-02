@@ -4,7 +4,7 @@ pie_chart = pygal.Pie()
 why = []
 data = []
 #import data
-file = open("whyuse.txt","r")
+file = open("555.txt","r")
 for line in file:
     why.append(line.strip('\n').split())
 for i in why:
@@ -20,5 +20,5 @@ pie_chart.add('เจ็บป่วย', data[3] / data[9])
 pie_chart.add('มีปัญหา', data[4] / data[9])
 pie_chart.add('ช่วยงานอาชีพ', data[5] / data[9])
 pie_chart.add('มีอาการอย่างเสพ', data[6] / data[9])
-pie_chart.add('อื่นๆ', data[7] / data[9] + data[8] / data[9])
+pie_chart.add('อื่นๆ', (data[7] + data[8]) / data[9])
 pie_chart.render_to_file('whyuse.svg')
