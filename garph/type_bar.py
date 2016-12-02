@@ -20,7 +20,7 @@ y2557 = [int(i) for i in data[2]]
 y2558 = [int(i) for i in data[3]]
 
 # plot graph
-bar_chart = pygal.HorizontalBar(fill=True, interpolate='cubic', style=DarkStyle, x_title="Total", y_title="Drugs")
+bar_chart = pygal.HorizontalBar(fill=True, interpolate='cubic', x_title="Total", y_title="Drugs")
 bar_chart.title = "Type of Drugs"
 bar_chart.x_labels = ['Heloin', 'Opium', 'Weed', 'Kratom', 'Sedative', 'Amphetamine', 'Narcotic', 'Alcohol', 'Volatile','Cigarette','Ice', 'Other','Unknown']
 bar_chart.add(years[0], y2555)
