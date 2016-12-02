@@ -1,6 +1,6 @@
 import pygal
 
-pie_chart = pygal.Pie()
+pie_chart = pygal.Pie(print_values=True, print_values_position='top')
 why = []
 data = []
 #import data
@@ -11,7 +11,7 @@ for i in why:
     data.append(int(i[0]) + int(i[1]) + int(i[2]) + int(i[3]))
 
 # Plot pie_chart
-pie_chart.title = 'สัดส่วนของสาเหตุการใช้ยาตั้งแต่ปี 2555-2558 (in %)'
+pie_chart.title = 'สัดส่วนของสาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
 #using data 
 pie_chart.add('ทดลอง', data[0] / data[9])
 pie_chart.add('เพื่อนชวน', data[1] / data[9])
