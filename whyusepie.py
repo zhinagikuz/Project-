@@ -4,7 +4,7 @@ pie_chart = pygal.Pie()
 why = []
 data = []
 #import data
-file = open("555.txt","r")
+file = open("whyuse.txt","r")
 for line in file:
     why.append(line.strip('\n').split())
 for i in why:
