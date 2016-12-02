@@ -24,6 +24,5 @@ line_chart.add('เจ็บป่วย', [data[12], data[13], data[14], data[1
 line_chart.add('มีปัญหา', [data[16], data[17], data[18], data[19]])
 line_chart.add('ช่วยงานอาชีพ', [data[20], data[21], data[22], data[23]])
 line_chart.add('มีอาการอย่างเสพ', [data[24], data[25], data[26], data[27]])
-line_chart.add('อื่นๆ', [data[28], data[29], data[30], data[31]])
-line_chart.add('ไม่ระบุ', [data[32], data[33], data[34], data[35]])
+line_chart.add('อื่นๆ', [data[28] + data[32], data[29] + data[33], data[30] + data[34], data[31] + data[35]])
 line_chart.render_to_file('whyusebar.svg')
