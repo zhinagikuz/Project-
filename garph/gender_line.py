@@ -1,32 +1,26 @@
-import matplotlib.pyplot as plt
+import pygal
+from pygal.style import DarkStyle
 
 # the data
 # open file gender.txt
-file = open("gender.txt", "r")
-gender = []
+file = open('gender.txt', 'r')
+data = []
 years = []
 male = []
 female = []
-for line in file:
-    gender.append(line.strip('\n').split())
-for lst in gender:
-    years.append(int(lst[0]))
-    male.append(int(lst[1]))
-    female.append(int(lst[2]))
+for d in file:
+    data.append(d.strip('\n').split())
+for d in data:
+    years.append(d[0])
+    male.append(int(d[1]))
+    female.append(int(d[2]))
+# plot graph
+line_chart = pygal.Line(fill=True, interpolate='cubic', style=DarkStyle, x_title="Years", y_title="Number of Patients")
+line_chart.title = 'Gender'
+line_chart.x_labels = years
+line_chart.add('Male', male)
+line_chart.add('Female', female)
+line_chart.render_to_file('gender_line.svg')
 
-# plot line graph
-plt.plot(years, male, color='#365e8c',label='Male', linewidth=2.5, marker='o') # (x,y)
-plt.plot(years, female, color='#8c364a', label='Female', linewidth=2.5, marker='o')
-
-plt.xlabel('Fiscal Years')
-plt.ylabel('Number of Patients')
-plt.title('Gender')
-plt.legend()
-plt.xticks(years, years) # (x value, xtricks)
-plt.margins(0.2)
-plt.grid(True)
-
-plt.show()
-
-# close file gender.txt
+# close file type.txt
 file.close()
