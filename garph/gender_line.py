@@ -20,7 +20,7 @@ line_chart.title = 'Gender'
 line_chart.x_labels = years
 line_chart.add('Male', male)
 line_chart.add('Female', female)
-line_chart.render_to_file('gender_line.svg')
+line_chart.render_to_file('img-svg/gender_line.svg')
 
 # close file type.txt
 file.close()
