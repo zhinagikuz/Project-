@@ -1,3 +1,4 @@
+"""Graph type of drugs"""
 import pygal
 from pygal.style import DarkStyle
 

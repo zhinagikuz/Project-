@@ -1,3 +1,4 @@
+"""Graph Gender"""
 import pygal
 from pygal.style import DarkStyle
 
@@ -15,7 +16,7 @@ for d in data:
     male.append(int(d[1]))
     female.append(int(d[2]))
 # plot graph
-line_chart = pygal.Line(fill=True, interpolate='cubic', x_title="Years", y_title="Number of Patients")
+line_chart = pygal.Line(fill=True, interpolate='cubic', x_title="Years", y_title="Number of Patients", stroke_style={"width":3})
 line_chart.title = 'Gender'
 line_chart.x_labels = years
 line_chart.add('Male', male)
