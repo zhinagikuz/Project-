@@ -1,58 +1,33 @@
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig = plt.figure()
-ax = fig.add_subplot(111)
+import pygal
+from pygal.style import DarkStyle
 
 # the data
 # open file type.txt
-file = open("type.txt","r")
-drugs = []
+file = open('type.txt', 'r')
+data = []
+years = []
 y2555 = []
 y2556 = []
 y2557 = []
 y2558 = []
-for line in file:
-    drugs.append(line.strip('\n').split())
-for i in range(len(drugs)):
-    drugs[i].pop(0)
-y2555 = [int(i) for i in drugs[0]]
-y2556 = [int(i) for i in drugs[1]]
-y2557 = [int(i) for i in drugs[2]]
-y2558 = [int(i) for i in drugs[3]]
+for d in file:
+    data.append(d.strip('\n').split())
+for d in data:
+    years.append(d.pop(0))
+y2555 = [int(i) for i in data[0]]
+y2556 = [int(i) for i in data[1]]
+y2557 = [int(i) for i in data[2]]
+y2558 = [int(i) for i in data[3]]
 
-n_groups = len(y2555)
- 
-# create plot
-index = np.arange(n_groups) # data in list
-bar_width = 0.2
- 
-rects1 = ax.bar(index, y2555, bar_width,
-                 color='#8888F0',
-                 label='2555')
- 
-rects2 = ax.bar(index + bar_width, y2556, bar_width,
-                 color='#88F0BC',
-                 label='2556')
+# plot graph
+bar_chart = pygal.HorizontalBar(fill=True, interpolate='cubic', style=DarkStyle, x_title="Total", y_title="Drugs")
+bar_chart.title = "Type of Drugs"
+bar_chart.x_labels = ['Heloin', 'Opium', 'Weed', 'Kratom', 'Sedative', 'Amphetamine', 'Narcotic', 'Alcohol', 'Volatile','Cigarette','Ice', 'Other','Unknown']
+bar_chart.add(years[0], y2555)
+bar_chart.add(years[1], y2556)
+bar_chart.add(years[2], y2557)
+bar_chart.add(years[3], y2558)
+bar_chart.render_to_file("type_bar.svg")
 
-rects3 = ax.bar(index + (bar_width*2), y2557, bar_width,
-                 color='#F0BC88',
-                 label='2557')
- 
-rects4 = ax.bar(index + (bar_width*3), y2558, bar_width,
-                 color='#F088F0',
-                 label='2558')
-
-plt.title('Type of Drugs')
-plt.xlabel('Drugs')
-plt.ylabel('Total')
-plt.xticks(index + bar_width*2, ('Heloin', 'Opium', 'Weed', 'Kratom', 'Sedative', 'Amphetamine', 'Narcotic', 'Alcohol', 'Volatile','Cigarette','Ice', 'Other','Unknown'))
-plt.legend()
-
-ax.set_xlim(-bar_width,len(index)+bar_width) # space margin left
-plt.grid(True)
-
-plt.show()
-
-# close file gender.txt
+# close file type.txt
 file.close()
