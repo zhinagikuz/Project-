@@ -1,8 +1,8 @@
 """The graph shows result about ages between 2555-2558"""
 import pygal
+#import data age.txt
 from pygal.style import Style
-custom_style = Style(
-colors=('#2E64FE', '#E8537A', '#FFFF00', '#3ADF00'))
+custom_style = Style(colors=('#2E64FE', '#E8537A', '#FFFF00', '#3ADF00'))
 bar_chart = pygal.Bar(style=custom_style)
 bar_chart.title = "กลุ่มอายุการใช้ยาเสพติด ปี 2555-2558"
 bar_chart.x_labels = "ปี 2555", "ปี 2556", "ปี 2557", "ปี 2558"
