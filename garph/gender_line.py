@@ -1,3 +1,4 @@
+"""Graph Gender"""
 import pygal
 from pygal.style import DarkStyle
 
