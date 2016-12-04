@@ -3,7 +3,7 @@ import pygal
 from pygal.style import Style
 custom_style = Style(
 colors=('#2E64FE', '#E8537A', '#FFFF00', '#3ADF00'))
-bar_chart = pygal.Bar(style=custom_style)
+bar_chart = pygal.Bar(style=custom_style, x_title="Years", y_title="Number of Patients")
 bar_chart.title = "กลุ่มอายุการใช้ยาเสพติด ปี 2555-2558"
 bar_chart.x_labels = "ปี 2555", "ปี 2556", "ปี 2557", "ปี 2558"
 bar_chart.add('0-14 ปี', [256, 131, 144, 145])

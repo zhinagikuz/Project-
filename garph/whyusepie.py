@@ -1,6 +1,6 @@
 import pygal
 
-pie_chart = pygal.Pie(print_values=True, print_values_position='top')
+pie_chart = pygal.Pie()
 why = []
 data = []
 #import data
