@@ -10,7 +10,7 @@ gauge.add('15-24 ปี', [{'value': 36.47, 'max_value': 100}])
 gauge.add('25-54 ปี', [{'value': 58.02, 'max_value': 100}])
 gauge.add('55+ ปี', [{'value': 2.88, 'max_value': 100}])
 
-gauge.render_to_file('age_test.svg')
+gauge.render_to_file('age_guage.svg')
 =======
 from pygal.style import Style
 custom_style = Style(
@@ -22,5 +22,5 @@ bar_chart.add('0-14 ปี', [256, 131, 144, 145])
 bar_chart.add('15-24 ปี', [3543, 2864, 2478, 1852])
 bar_chart.add('25-54 ปี', [5637, 4702, 4280, 3381])
 bar_chart.add('55+ ปี', [279, 263, 269, 288])
-bar_chart.render_to_file('ages2555.svg')
+bar_chart.render_to_file('ages_linebar.svg')
 >>>>>>> refs/remotes/origin/jugjig
