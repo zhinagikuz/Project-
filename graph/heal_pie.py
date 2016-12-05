@@ -10,4 +10,4 @@ pie_chart.add("ถูกบังคับ", 16)
 pie_chart.add("สุขภาพทรุดโทรม", 36)
 pie_chart.add("อื่นๆ", 5177)
 
-pie_chart.render_to_file('reson-to-see-pie.svg')
+pie_chart.render_to_file('img-svg/heal_pie.svg')
