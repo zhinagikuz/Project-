@@ -28,7 +28,7 @@ bar_chart.add(years[0], y2555)
 bar_chart.add(years[1], y2556)
 bar_chart.add(years[2], y2557)
 bar_chart.add(years[3], y2558)
-bar_chart.render_to_file("img-svg/type_bar.svg")
+bar_chart.render_to_file("type_bar.svg")
 
 # close file type.txt
 file.close()
