@@ -9,9 +9,4 @@ pie_chart.add("เพื่ออนาคต", 1)
 pie_chart.add("ถูกบังคับ", 16)
 pie_chart.add("สุขภาพทรุดโทรม", 36)
 pie_chart.add("อื่นๆ", 5177)
-
-<<<<<<< HEAD:garph/heal_pie.py
-pie_chart.render_to_file('heal_pie.svg')
-=======
 pie_chart.render_to_file('img-svg/heal_pie.svg')
->>>>>>> origin/master:graph/heal_pie.py

@@ -8,5 +8,4 @@ gauge.add('0-14 ปี', [{'value': 2.63, 'max_value': 100}])
 gauge.add('15-24 ปี', [{'value': 36.47, 'max_value': 100}])
 gauge.add('25-54 ปี', [{'value': 58.02, 'max_value': 100}])
 gauge.add('55+ ปี', [{'value': 2.88, 'max_value': 100}])
-
 gauge.render_to_file('img-svg/age_guage.svg')
