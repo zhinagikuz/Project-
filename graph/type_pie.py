@@ -37,19 +37,19 @@ for i in data:
 
 # plot graph
 pie_chart = pygal.Pie(inner_radius=0.6)
-pie_chart.title = "Total type of drugs in 2555-2558"
-pie_chart.add('Helion', sum(heloin))
-pie_chart.add('Opium', sum(opium))
-pie_chart.add('Weed', sum(weed))
-pie_chart.add('kratom', sum(kratom))
-pie_chart.add('Sedative', sum(sedative))
-pie_chart.add('Amphetamine', sum(amphetamine))
-pie_chart.add('Narcotic', sum(narcotic))
-pie_chart.add('Alcohol', sum(alcohol))
-pie_chart.add('Volatile', sum(volatile))
-pie_chart.add('Cigarette', sum(cigarette))
-pie_chart.add('Ice', sum(ice))
-pie_chart.add('Other', sum(other))
+pie_chart.title = "ผลรวมแต่ละประเภทยาเสพติดที่เสพ ปี 2555-2558"
+pie_chart.add('เฮโรอีน', sum(heloin))
+pie_chart.add('ฝิ่น', sum(opium))
+pie_chart.add('กัญชา', sum(weed))
+pie_chart.add('กระท่อม', sum(kratom))
+pie_chart.add('ยากล่อมประสาท', sum(sedative))
+pie_chart.add('ยาบ้า', sum(amphetamine))
+pie_chart.add('ยานอนหลับ', sum(narcotic))
+pie_chart.add('สุรา', sum(alcohol))
+pie_chart.add('สาระเหย', sum(volatile))
+pie_chart.add('บุหรี่', sum(cigarette))
+pie_chart.add('ยาไอซ์', sum(ice))
+pie_chart.add('อื่นๆ', sum(other))
 pie_chart.render_to_file("img-svg/type_pie.svg")
 
 # close file type.txt
