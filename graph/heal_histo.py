@@ -1,6 +1,6 @@
 """The graph shows the reason that use """
 import pygal
-bar_chart = pygal.Bar(x_title="Reason", y_title="Number of Patients")
+bar_chart = pygal.Bar(x_title="เหตุผล", y_title="จำนวนผู้ป่วย")
 bar_chart.title = "สาเหตุการเข้ารับการรักษา"
 bar_chart.x_labels = "หาซื้อยาก", "เงินไม่พอใช้", "กลัวถูกจับ", "เพื่ออนาคต", "ถูกบังคับ", "สุขภาพทรุดโทรม", "อื่นๆ"
 bar_chart.add('2555', [{'value': 5280}, 2347, 750, 1, 7, 19, 1311])

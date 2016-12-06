@@ -1,6 +1,6 @@
 import pygal
 
-line_chart = pygal.Bar()
+line_chart = pygal.Bar(x_title="ปี", y_title="จำนวนผู้ป่วย")
 why = []
 data = []
 #import data
