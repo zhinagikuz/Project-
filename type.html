@@ -1,4 +1,5 @@
 <html>
+<title>About Type</title>
 <head>
   <meta charset='UTF-8'>
 
@@ -13,6 +14,7 @@ header {
     color: white;
     background-color: black;
     background-image: url(D:/PSITProjects/Project-/img/title.jpg);
+    background-image: url(img/title.jpg);
     clear: left;
     text-align: center;
 }
@@ -49,7 +51,7 @@ article {
 
 <!-- Bootstrap -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
-
+<nav style="position: fixed">
 <body>
 
 <header>
@@ -73,12 +75,26 @@ article {
   <p>detail content</p>
 
 <!--show graph-->
+  <p>จากข้อมูลจำนวนผู้ป่วยยาเสพติดของสถาบันบำบัดรักษาและฟื้นฟูผู้ติดยาเสพติดแห่งชาติบรมราชชนนีได้จำแนกผู้ป่วยตามประเภทยาเสพติดออกเป็น 12 ประเภท ดังกราฟ</p>
+<!--show type of drugs graph-->
+<div align="center">
+  <figure>
+    <embed src="garph/img-svg/type_pie.svg" width="80%">
+    <embed src="graph/img-svg/type_pie.svg" width="80%">
+  </figure>
+</div>
+<!-- show type of drugs graph end -->
+  <p>จากกราฟข้างบนนี้จะแสดงผลรวมของยาเสพติดแต่ละประเภทตั้งแต่ปี 2555-2558 จะเห็นได้ว่ายาเสพติดประเภท 'ยาบ้า' นั้นเป็นประเภทที่มีผู้ป่วยติดมากที่สุด รองลงมาอันดับ2 เป็น 'สุรา' และอันดับที่3 เป็น 'ยาไอซ์' เมื่อจำแนกแต่ละประเภทยาเสพติดเพื่อแสดงการเพิ่มขึ้น/ลดลงของจำนวนผู้ป่วยนั้นจะพบว่า</p>
+<!--show type of drugs graph-->
 <div align="center">
   <figure>
     <embed src="garph/img-svg/type_bar.svg" width="80%">
+    <embed src="graph/img-svg/type_bar.svg" width="80%">
   </figure>
 </div>
 <!-- show graph end -->
+<!-- show type of drugs graph end -->
+  <p>จำนวนผูป่วยของทั้ง 3 ลำดับนั้นลดลงเรื่อยๆ ในขณะที่ยาเสพติดประเภทกัญชานั้นมีจำนวนเพิ่มขึ้นทุกปี</p>
 </article>
 
 <footer>© Kuen Nee Mee Khon Die</footer>
