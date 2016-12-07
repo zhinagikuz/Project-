@@ -20,6 +20,7 @@ line_chart = pygal.Line(fill=True, interpolate='cubic', x_title="ปี", y_titl
 line_chart.title = 'เพศ'
 line_chart.x_labels = years
 line_chart.add('ชาย', male)
+
 line_chart.add('หญิง', female)
 line_chart.render_to_file('img-svg/gender_line.svg')
 

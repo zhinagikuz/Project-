@@ -1,4 +1,5 @@
 <html>
+<title>About General</title>
 <head>
   <meta charset='UTF-8'>
 
@@ -17,6 +18,11 @@ header {
     clear: left;
     text-align: center;
 }
+
+p {
+  font-size: 17px;
+}
+
 footer {
     padding: 1em;
     color: white;
@@ -61,8 +67,7 @@ article {
 <!-- nav menu -->
 <nav>
   <ul>
-    <li><a href="gender.html"><button type="button" class="btn btn-danger">Gender</button></a></li>
-    <li><a href="age.html"><button type="button" class="btn btn-danger">Age</button></a></li>
+    <li><a href="general.html"><button type="button" class="btn btn-danger">General</button></a></li>
     <li><a href="type.html"><button type="button" class="btn btn-danger">Type of drugs</button></a></li>
     <li><a href="use.html"><button type="button" class="btn btn-danger">Causes of addiction</button></a></li>
     <li><a href="heal.html"><button type="button" class="btn btn-danger">Cause of treatment</button></a></li>
@@ -71,25 +76,31 @@ article {
 <!-- nav menu end -->
 
 <article>
-  <h1>Age <small>กลุ่มช่วงอายุ</small></h1>
-  <p>จำนวนผู้ป่วยส่วนใหญ่จะอยู่ในช่วงอายุ 25-54 ปี รองลงมาคือช่วงอายุ 15-24 ปี</p>
+  <h1>General <small>ข้อมูลทั่วไป</small></h1>
+  <p style="text-indent: 3em">สถาบันบำบัดรักษาและฟื้นฟูผู้ติดยาเสพติดแห่งชาติบรมราชชนนีได้เก็บรวบรวมข้อมูลผู้ป่วยที่ทำการเข้ารับการรักษากับทางสถาบัน โดยมีการจำแนกข้อมูลตามเพศ และ อายุ ดังนี้<br></p>
 
-<!--show graph-->
+<!-- show graph -->
 <div align="center">
   <figure>
+    <embed src="graph/img-svg/gender_line.svg" width="80%">
     <embed src="graph/img-svg/ages_linebar.svg" width="80%">
-    <embed src="graph/img-svg/age_guage.svg" width="80%">
   </figure>
 </div>
 <!-- show graph end -->
-<!-- show total about graph -->
   <br>
-  <p style="text-indent:4em;">จากการวิเคราะห์ข้อมูลของกราฟช่วงอายุ จะพบเห็นได้ว่าในช่วงอายุ <b>15-24 ปี และ 25-54 ปี</b>
-จะเป็นช่วงอายุที่เสพยาเสพติดมากที่สุด เนื่องจากเป็นวัยรุ่นที่ชอบทดลองและถูกเพื่อนชวนเป็นพิเศษ
+  <p>จำนวนผู้ป่วยส่วนใหญ่จะอยู่ในช่วงอายุ 25-54 ปี รองลงมาคือช่วงอายุ 15-24 ปี</p><br>
+<!-- show graph -->
+<div align="center">
+  <figure>
+  <embed src="graph/img-svg/age_guage.svg" width="80%">
+  </figure>
+</div>
+  <br>
+  <p style="text-indent:3em;">จากการวิเคราะห์ข้อมูลของกราฟช่วงอายุ จะพบเห็นได้ว่าในช่วงอายุ <b>15-24 ปี และ 25-54 ปี</b>
+จะเป็นช่วงอายุที่เสพยาเสพติดมาก เนื่องจากเป็นวัยรุ่นที่ชอบทดลองและถูกเพื่อนชวนเป็นพิเศษ
 และช่วงวัยผู้ใหญ่ เป็นวัยที่มีความต้องการทางฐานะสามารถจำหน่ายและบริโภคยาเสพติดได้ ซึ่งจากข้อมูลตามข่าวช่องต่างๆ
 จะเป็นช่วงอายุที่ตรงกับกราฟพอดี เราสามารถนำกราฟนี้ไปวิเคราะห์กับกราฟของเหตุผลที่ใช้ยาเสพติด
 กับกราฟเหตุผลที่เข้ารับการรักษา</p>
-<!-- show total about graph end -->
 </article>
 
 <footer>© Kuen Nee Mee Khon Die</footer>
