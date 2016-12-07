@@ -15,7 +15,7 @@ for i in why:
 
 # Plot pie_chart
 line_chart.title = 'สัดส่วนของสาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
-line_chart.x_labels = map(str, range(2555, 2558))
+line_chart.x_labels = map(str, range(2555, 2559))
 #using data 
 line_chart.add('ทดลอง', [data[0], data[1], data[2], data[3]])
 line_chart.add('เพื่อนชวน', [data[4], data[5], data[6], data[7]])
