@@ -3,7 +3,7 @@ import pygal
 why = []
 data = []
 #import data
-file = open("555.txt","r")
+file = open("why.txt","r")
 for line in file:
     why.append(line.strip('\n').split())
 for i in why:
