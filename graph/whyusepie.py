@@ -11,7 +11,7 @@ for i in why:
 
 pie_chart = pygal.Pie(inner_radius=.5)
 # Plot pie_chart
-pie_chart.title = 'สัดส่วนของสาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
+pie_chart.title = 'สาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
 #using data 
 pie_chart.add('ทดลองใช้เอง', data[0])
 pie_chart.add('เพื่อนชวน', data[1])
