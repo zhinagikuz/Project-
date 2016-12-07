@@ -1,6 +1,6 @@
 """The graph shows the reason that use """
 import pygal
-pie_chart = pygal.Pie()
+pie_chart = pygal.Pie(inner_radius=.45)
 pie_chart.title = "สาเหตุการเข้ารับการรักษา ตั้งแต่ปี 2555-2558"
 pie_chart.add("เพื่ออนาคต", 15037)
 pie_chart.add("ถูกบังคับ", 8036)
