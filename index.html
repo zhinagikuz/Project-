@@ -9,20 +9,20 @@
     border: 1px solid gray;
 }
 
-.boxhead a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
 header {
     padding: 1em;
     color: white;
     background-color: black;
-    background-image: url(D:/PSITProjects/Project-/img/title.jpg);
     background-image: url(img/title.jpg);
+    background-size:fixed;
     clear: left;
     text-align: center;
 }
+
+p {
+  font-size: 17px;
+}
+
 footer {
     padding: 1em;
     color: white;
@@ -45,9 +45,10 @@ nav ul {
 
 article {
     margin-left: 170px;
-    border-left: 2px solid gray;
-    padding: 1.5cm;
+    border-left: 1px solid gray;
+    padding: 0.5cm;
     padding-left: 1cm;
+    padding-right: 1cm;
     overflow: hidden;
 }
   </style>
@@ -58,15 +59,15 @@ article {
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
 
 <body>
+
 <header>
   <h1><a href="index.html" style="text-decoration:none; color : #FFFFFF;">Data Analysis Of Narcotic</a></h1>
 </header>
 
 <!-- nav menu -->
-<nav style="position: fixed">
+<nav>
   <ul>
-    <li><a href="gender.html"><button type="button" class="btn btn-danger">Gender</button></a></li>
-    <li><a href="age.html"><button type="button" class="btn btn-danger">Age</button></a></li>
+    <li><a href="general.html"><button type="button" class="btn btn-danger">General</button></a></li>
     <li><a href="type.html"><button type="button" class="btn btn-danger">Type of drugs</button></a></li>
     <li><a href="use.html"><button type="button" class="btn btn-danger">Causes of addiction</button></a></li>
     <li><a href="heal.html"><button type="button" class="btn btn-danger">Cause of treatment</button></a></li>
@@ -76,7 +77,8 @@ article {
 
 <article>
   <h1>การวิเคราะห์ข้อมูลผู้ป่วยติดยาเสพติด</h1>
-  <p>detail content</p>
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C5bweYmprUc" frameborder="0" allowfullscreen></iframe></div>
 </article>
 
 <footer>© Kuen Nee Mee Khon Die</footer>
