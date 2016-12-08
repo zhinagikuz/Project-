@@ -200,7 +200,7 @@ def why():
         data.append(int(i[3]))
 
     # Plot line_chart
-    line_chart.title = 'สัดส่วนของสาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
+    line_chart.title = 'สาเหตุการใช้ยาตั้งแต่ปี 2555-2558'
     line_chart.x_labels = map(str, range(2555, 2559))
     #using data 
     line_chart.add('ทดลองใช้เอง', [data[0], data[1], data[2], data[3]])
