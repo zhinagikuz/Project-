@@ -192,25 +192,50 @@ def why():
 why()
 
 def heal():
+    #import data
+    year = []
+    label = []
+    hardf = []
+    money = []
+    arrest = []
+    future = []
+    force = []
+    heatlh = []
+    other = []
+    data = []
+    file = open("graph/heal.txt","r")
+    for line in file:
+        data.append(line.strip('\n').split())
+    # split data to target list
+    year.append(data[0])
+    label.append(data[1])
+    hardf.append(data[2])
+    money.append(data[3])
+    arrest.append(data[4])
+    future.append(data[5])
+    force.append(data[6])
+    heatlh.append(data[7])
+    other.append(data[8])
+
     """The graph shows the reason that use """  
     pie_chart = pygal.Pie(inner_radius=.45)
     pie_chart.title = "สาเหตุการเข้ารับการรักษา ตั้งแต่ปี 2555-2558"
-    pie_chart.add("เพื่ออนาคต", 15037)
-    pie_chart.add("ถูกบังคับ", 8036)
-    pie_chart.add("สุขภาพทรุดโทรม", 2109)
-    pie_chart.add("หาซื้อยาก", 1)
-    pie_chart.add("เงินไม่พอใช้", 16)
-    pie_chart.add("กลัวถูกจับ", 36)
-    pie_chart.add("อื่นๆ", 5177)
+    pie_chart.add(label[0][0], int(hardf[0][0]) + int(hardf[0][1]) + int(hardf[0][2]) + int(hardf[0][3]))
+    pie_chart.add(label[0][1], int(money[0][0]) + int(money[0][1]) + int(money[0][2]) + int(money[0][3]))
+    pie_chart.add(label[0][2], int(arrest[0][0]) + int(arrest[0][1]) + int(arrest[0][2]) + int(arrest[0][3]))
+    pie_chart.add(label[0][3], int(future[0][0]) + int(future[0][1]) + int(future[0][2]) + int(future[0][3]))
+    pie_chart.add(label[0][4], int(force[0][0]) + int(force[0][1]) + int(force[0][2]) + int(force[0][3]))
+    pie_chart.add(label[0][5], int(heatlh[0][0]) + int(heatlh[0][1]) + int(heatlh[0][2]) + int(heatlh[0][3]))
+    pie_chart.add(label[0][6], int(other[0][0]) + int(other[0][1]) + int(other[0][2]) + int(other[0][3]))
     pie_chart.render_to_file('graph/img-svg/heal_pie.svg')
 
     """The graph shows the reason that use per years"""
     bar_chart = pygal.Bar(x_title="เหตุผล", y_title="จำนวนผู้ป่วย")
     bar_chart.title = "สาเหตุการเข้ารับการรักษา"
-    bar_chart.x_labels = "หาซื้อยาก", "เงินไม่พอใช้", "กลัวถูกจับ", "เพื่ออนาคต", "ถูกบังคับ", "สุขภาพทรุดโทรม", "อื่นๆ"
-    bar_chart.add('2555', [{'value': 5280}, 2347, 750, 1, 7, 19, 1311])
-    bar_chart.add('2556', [{'value': 3871}, 2206, 511, 0, 3, 5, 1364])
-    bar_chart.add('2557', [{'value': 3223}, 1949, 538, 0, 1, 6, 1354])
-    bar_chart.add('2558', [{'value': 2663}, 1534, 310, 0, 5, 6, 1148])
+    bar_chart.x_labels = label[0]
+    bar_chart.add(year[0][0], [int(hardf[0][0]), int(money[0][0]), int(arrest[0][0]), int(future[0][0]), int(force[0][0]), int(heatlh[0][0]), int(other[0][0])])
+    bar_chart.add(year[0][1], [int(hardf[0][1]), int(money[0][1]), int(arrest[0][1]), int(future[0][1]), int(force[0][1]), int(heatlh[0][1]), int(other[0][1])])
+    bar_chart.add(year[0][2], [int(hardf[0][2]), int(money[0][2]), int(arrest[0][2]), int(future[0][2]), int(force[0][2]), int(heatlh[0][2]), int(other[0][2])])
+    bar_chart.add(year[0][3], [int(hardf[0][3]), int(money[0][3]), int(arrest[0][3]), int(future[0][3]), int(force[0][3]), int(heatlh[0][3]), int(other[0][3])])
     bar_chart.render_to_file('graph/img-svg/heal_histo.svg')
 heal()
