@@ -232,10 +232,10 @@ def heal():
     """The graph shows the reason that use per years"""
     bar_chart = pygal.Bar(x_title="เหตุผล", y_title="จำนวนผู้ป่วย")
     bar_chart.title = "สาเหตุการเข้ารับการรักษา"
-    bar_chart.x_labels = label[0]
-    bar_chart.add(year[0][0], [int(hardf[0][0]), int(money[0][0]), int(arrest[0][0]), int(future[0][0]), int(force[0][0]), int(heatlh[0][0]), int(other[0][0])])
-    bar_chart.add(year[0][1], [int(hardf[0][1]), int(money[0][1]), int(arrest[0][1]), int(future[0][1]), int(force[0][1]), int(heatlh[0][1]), int(other[0][1])])
-    bar_chart.add(year[0][2], [int(hardf[0][2]), int(money[0][2]), int(arrest[0][2]), int(future[0][2]), int(force[0][2]), int(heatlh[0][2]), int(other[0][2])])
-    bar_chart.add(year[0][3], [int(hardf[0][3]), int(money[0][3]), int(arrest[0][3]), int(future[0][3]), int(force[0][3]), int(heatlh[0][3]), int(other[0][3])])
+    bar_chart.x_labels = label[0][3], label[0][4], label[0][5], label[0][0], label[0][1], label[0][2], label[0][6],
+    bar_chart.add(year[0][0], [int(future[0][0]), int(force[0][0]), int(heatlh[0][0]), int(hardf[0][0]), int(money[0][0]), int(arrest[0][0]), int(other[0][0])])
+    bar_chart.add(year[0][1], [int(future[0][1]), int(force[0][1]), int(heatlh[0][1]), int(hardf[0][1]), int(money[0][1]), int(arrest[0][1]), int(other[0][1])])
+    bar_chart.add(year[0][2], [int(future[0][2]), int(force[0][2]), int(heatlh[0][2]), int(hardf[0][2]), int(money[0][2]), int(arrest[0][2]), int(other[0][2])])
+    bar_chart.add(year[0][3], [int(future[0][3]), int(force[0][3]), int(heatlh[0][3]), int(hardf[0][3]), int(money[0][3]), int(arrest[0][3]), int(other[0][3])])
     bar_chart.render_to_file('graph/img-svg/heal_histo.svg')
 heal()
