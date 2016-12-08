@@ -29,30 +29,55 @@ def gender():
     file.close()
 gender()
 
-def ages():
+def ages_linebar():
     """The graph shows result about ages between 2555-2558 Percent_Vers"""
+    # open ages_guage.txt
+    file = open('graph/ages_guage.txt', 'r')
+    for d in file:
+        data = d.split()
     gauge = pygal.SolidGauge(inner_radius=0.70)
     gauge.title = "กลุ่มอายุการใช้ยาเสพติด ปี 2555-2558"
     percent_formatter = lambda x: '{:.10g}%'.format(x)
     gauge.value_formatter = percent_formatter
-    gauge.add('0-14 ปี', [{'value': 2.63, 'max_value': 100}])
-    gauge.add('15-24 ปี', [{'value': 36.47, 'max_value': 100}])
-    gauge.add('25-54 ปี', [{'value': 58.02, 'max_value': 100}])
-    gauge.add('55+ ปี', [{'value': 2.88, 'max_value': 100}])
+    gauge.add('0-14 ปี', [{'value': float(data[1]), 'max_value': 100}])
+    gauge.add('15-24 ปี', [{'value': float(data[2]), 'max_value': 100}])
+    gauge.add('25-54 ปี', [{'value': float(data[3]), 'max_value': 100}])
+    gauge.add('55+ ปี', [{'value': float(data[4]), 'max_value': 100}])
     gauge.render_to_file('graph/img-svg/age_guage.svg')
+    file.close()
+ages_linebar()
 
+def ages_guage():
     """The graph shows result about ages between 2555-2558"""
+    # open ages_linebar.txt
+    file = open('graph/ages_linebar.txt', 'r')
+    data = []
+    years = []
+    ages_kid = []
+    ages_teen = []
+    ages_adult = []
+    ages_old = []
+    for d in file:
+        data.append(d.strip('\n').split())
+    for d in data:
+        years.append(d[0])
+        ages_kid.append(int(d[1]))
+        ages_teen.append(int(d[2]))
+        ages_adult.append(int(d[3]))
+        ages_old.append(int(d[4]))
     custom_style = Style(
     colors=('#2E64FE', '#E8537A', '#FFFF00', '#3ADF00'))
     bar_chart = pygal.Bar(style=custom_style, x_title="ปี", y_title="จำนวนผู้ป่วย")
     bar_chart.title = "กลุ่มอายุการใช้ยาเสพติด ปี 2555-2558"
-    bar_chart.x_labels = "ปี 2555", "ปี 2556", "ปี 2557", "ปี 2558"
-    bar_chart.add('0-14 ปี', [256, 131, 144, 145])
-    bar_chart.add('15-24 ปี', [3543, 2864, 2478, 1852])
-    bar_chart.add('25-54 ปี', [5637, 4702, 4280, 3381])
-    bar_chart.add('55+ ปี', [279, 263, 269, 288])
+    bar_chart.x_labels = years
+    bar_chart.add('0-14 ปี', ages_kid)
+    bar_chart.add('15-24 ปี', ages_teen)
+    bar_chart.add('25-54 ปี', ages_adult)
+    bar_chart.add('55+ ปี', ages_old)
     bar_chart.render_to_file('graph/img-svg/ages_linebar.svg')
-ages()
+    # close ages_linebar.txt
+    file.close()
+ages_guage()
 
 def types():
     """Graph total type of drugs in years 2555-2558"""
